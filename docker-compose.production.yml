@@ -25,6 +25,8 @@ services:
       - static:/frontend_static
   gateway:
     image: fabi667coder/kittygram_gateway
+    depends_on:
+      - backend
     env_file: .env
     ports:
       - 9000:80
